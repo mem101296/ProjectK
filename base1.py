@@ -1,5 +1,5 @@
 #This will eventually be unscripted
-#Infinite loop needs to be created for user input
+#Infinite loop needs to be created for user input ln32
 
 def answer(userq): #Function answer can be called at any point
 
