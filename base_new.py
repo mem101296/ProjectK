@@ -8,8 +8,8 @@ def answer(userq): #Function answer can be called at any point
         A_answer = "> I am fine. Thanks." #Assigns variable
         return A_answer #returns answer or variable
 
-    elif userq == "You can't!":
-        B_answer = "> Wait what?!" #Assigns variable
+    elif userq == "You cant!":
+        B_answer = ("> Fine!") #Assigns variable
         return B_answer #returns answer or variable
 
     elif userq == "What are your morals":
@@ -17,7 +17,7 @@ def answer(userq): #Function answer can be called at any point
         return C_answer
 
     elif userq == "What can you do":
-        D_answer = "> Heres is what I can do? \n\"How are you?\" \n\"You can't\" \n\"What are your morals\" \n\"What can you do\" \n\"Help\""
+        D_answer = "> Heres is what I can do! \n•How are you? \n•You cant! \n•What are your morals \n•What can you do \n•Help"
         return D_answer
 
     elif userq == "What is todays date":
@@ -40,6 +40,18 @@ def answer(userq): #Function answer can be called at any point
 
 
 #Starting sequence, only said once
+Stext = "Starting Python......\n"
+SWtext = "......\n"
+for char in Stext: #starts a loop based on whats in Btext
+    sys.stdout.write(char) #prints out by each character
+    sys.stdout.flush() #Changes the pase of output
+    time.sleep(0.1) #amount it takes for it to print
+
+for char in SWtext: #starts a loop based on whats in Btext
+    sys.stdout.write(char) #prints out by each character
+    sys.stdout.flush() #Changes the pase of output
+    time.sleep(0.1) #amount it takes for it to print
+#Welcome sequence
 print("> Welcome User My Name Is Python") #I want this to search a database of welcoming sentences
 username = input("> What is your name? \n") #This will search for a way to ask a users name
 print("> Hello " + username + "! How can I help?")
@@ -60,9 +72,12 @@ while True:
         print("Please wait while program ends....")
         break
 
-    else:
+    elif userq == "You cant!":
+        print(answer(userq))
+        break
 
-        Btext = "...\n"
+    else:
+        Btext = "> ...\n"
         for char in Btext: #starts a loop based on whats in Btext
             sys.stdout.write(char) #prints out by each character
             sys.stdout.flush() #Changes the pase of output
