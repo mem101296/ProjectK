@@ -25,6 +25,11 @@ def answer(userq): #Function answer can be called at any point
         E_answer = ("> Current date is" + (now.strftime(" %m-%d-%Y"))) #Assigns time to variable
         return E_answer #returns answer or variable
 
+    elif userq == "What time is it":
+        now = datetime.datetime.now() #Assigns now to date and time
+        F_answer = ("> Current time is" + (now.strftime(" %l:%M%p %z"))) #Assigns time to variable
+        return F_answer #returns answer or variable
+
     elif userq == "Help": #help command
         Y_answer = "> Heres is what I can do? \n\"How are you?\" \n\"You can't\" \n\"What are your morals\" \n\"Help\""
         return Y_answer
@@ -56,10 +61,11 @@ while True:
         break
 
     else:
-        print(answer(userq)) #calls function according to user answer
+
         Btext = "...\n"
         for char in Btext: #starts a loop based on whats in Btext
             sys.stdout.write(char) #prints out by each character
             sys.stdout.flush() #Changes the pase of output
             time.sleep(0.4) #amount it takes for it to print
-        print(">What else can I help you with?")
+        print(answer(userq)) #calls function according to user answer
+        print("> What else can I help you with?")
