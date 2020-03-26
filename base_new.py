@@ -35,9 +35,11 @@ while True:
     userqAnswer = userq #records users answer
 
     if userq == "Good bye":
+        print("Please wait while program ends....")
         break
 
     elif userq =="good bye":
+        print("Please wait while program ends....")
         break
 
     else:
