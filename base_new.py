@@ -5,12 +5,12 @@ import sys
 def answer(userq): #Function answer can be called at any point
 
     if userq == "How are you":
-        A_answer = "> I am fine. Thanks."
-        return A_answer #returns the answer
+        A_answer = "> I am fine. Thanks." #Assigns variable
+        return A_answer #returns answer or variable
 
     elif userq == "You can't!":
-        B_answer = "> Wait what?!" #returns the answer
-        return B_answer
+        B_answer = "> Wait what?!" #Assigns variable
+        return B_answer #returns answer or variable
 
     elif userq == "What are your morals":
         C_answer = "> We are programmed to cause no harm to live forms."
@@ -21,11 +21,11 @@ def answer(userq): #Function answer can be called at any point
         return D_answer
 
     elif userq == "What is todays date":
-        now = datetime.datetime.now()
-        E_answer = ("> Current date is" + (now.strftime(" %m-%d-%Y")))
-        return E_answer
+        now = datetime.datetime.now() #Assigns now to date and time
+        E_answer = ("> Current date is" + (now.strftime(" %m-%d-%Y"))) #Assigns time to variable
+        return E_answer #returns answer or variable
 
-    elif userq == "Help":
+    elif userq == "Help": #help command
         Y_answer = "> Heres is what I can do? \n\"How are you?\" \n\"You can't\" \n\"What are your morals\" \n\"Help\""
         return Y_answer
 
@@ -47,19 +47,19 @@ while True:
 
     userqAnswer = userq #records users answer
 
-    if userq == "Good bye":
+    if userq == "Good bye": #ends program if Good bye is typed
         print("Please wait while program ends....")
         break
 
-    elif userq =="good bye":
+    elif userq =="good bye": #ends program if good bye is typed
         print("Please wait while program ends....")
         break
 
     else:
         print(answer(userq)) #calls function according to user answer
         Btext = "...\n"
-        for char in Btext:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.4)
+        for char in Btext: #starts a loop based on whats in Btext
+            sys.stdout.write(char) #prints out by each character
+            sys.stdout.flush() #Changes the pase of output
+            time.sleep(0.4) #amount it takes for it to print
         print(">What else can I help you with?")
