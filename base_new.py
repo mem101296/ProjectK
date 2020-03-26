@@ -1,6 +1,10 @@
+import datetime
+import time
+import sys
+
 def answer(userq): #Function answer can be called at any point
 
-    if userq == "How are you?":
+    if userq == "How are you":
         A_answer = "> I am fine. Thanks."
         return A_answer #returns the answer
 
@@ -12,9 +16,18 @@ def answer(userq): #Function answer can be called at any point
         C_answer = "> We are programmed to cause no harm to live forms."
         return C_answer
 
-    elif userq == "Help":
-        D_answer = "> Heres is what I can do? \n\"How are you?\" \n\"You can't\" \n\"What are your morals\" \n\"Help\""
+    elif userq == "What can you do":
+        D_answer = "> Heres is what I can do? \n\"How are you?\" \n\"You can't\" \n\"What are your morals\" \n\"What can you do\" \n\"Help\""
         return D_answer
+
+    elif userq == "What is todays date":
+        now = datetime.datetime.now()
+        E_answer = ("> Current date is" + (now.strftime(" %m-%d-%Y")))
+        return E_answer
+
+    elif userq == "Help":
+        Y_answer = "> Heres is what I can do? \n\"How are you?\" \n\"You can't\" \n\"What are your morals\" \n\"Help\""
+        return Y_answer
 
     else:
         Z_answer = "> ErRoR... \n> Eeerror \n> Sorry How can I help?"
@@ -44,3 +57,9 @@ while True:
 
     else:
         print(answer(userq)) #calls function according to user answer
+        Btext = "...\n"
+        for char in Btext:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(0.4)
+        print(">What else can I help you with?")
