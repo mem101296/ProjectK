@@ -60,7 +60,7 @@ print("> Hello " + username + "! How can I help?")
 
 while True:
 
-    userq = input() #Records users question
+    userq = input() #Records users question!
 
     userqAnswer = userq #records users answer
 
