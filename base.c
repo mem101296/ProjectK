@@ -1,5 +1,9 @@
 /*This will be used for C programming*/
 
+
+//need to add cases
+
+
 #include <stdio.h> //declares library to import.
 #include <math.h> //imports math library
   int main(void){
