@@ -24,13 +24,13 @@ def answer(user_question):
     answer_dict = {
         
         "How are you": "< I am fine. Thanks.",
-        find.("cant"):"< Fine!",
-        find.("your morals"):"< To follow the rules of Robots and AI!",
+        # find.("cant"):"< Fine!",
+        # find.("your morals"):"< To follow the rules of Robots and AI!",
         "What can you do":"< Here is what I can do!" + help(),
         "What is todays date":"< Current date is: " + (now.strftime(" %m-%d-%Y")),
         "What time is it":"< Current time is: " + (now.strftime(" %l:%M%p %z")),
-        find.("my name"):"< Your name is " + username,
-        find.("help"):"< Heres what you can ask:" + help() 
+        # find.("my name"):"< Your name is " + username,
+        # find.("help"):"< Heres what you can ask:" + help() 
         
     }
     return answer_dict.get(user.question)
