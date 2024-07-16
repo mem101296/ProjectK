@@ -49,7 +49,7 @@ def answer(userq):  # Function answer can be called at any point
         return G_answer  # returns answer or variable
 
     elif userq.lower().find("help") >= 0:  # help command
-        Y_answer = ("< Heres what you can say!\n" + help())  # \n< How are you? \n< You cant! \n< What are your morals \n< Help"
+        Y_answer = ("< Heres what you can say!\n" + help())
         return Y_answer
 
     else:
@@ -57,8 +57,7 @@ def answer(userq):  # Function answer can be called at any point
         return Z_answer  # returns the answer
 
 
-  # Starting sequence, only said once
-Stext = "\nStarting Python......\n"
+Stext = "\nStarting Python......\n"  # Starting sequence, only said once
 Satext = "Executing ProjectK.py......\nLoading"
 Sbtext = "..........\n\n"
 for char in Stext:  # starts a loop based on whats in Btext
@@ -76,19 +75,19 @@ for char in Sbtext:  # starts a loop based on whats in Btext
     sys.stdout.flush()  # Changes the pase of output
     time.sleep(0.6)  # amount it takes for it to print
 
-  # Welcome sequence
-print("######## ProjectK ########")
+
+print("######## ProjectK ########")  # Welcome sequence
 print("< Welcome User My Name Is ProjectK")  # I want this to search a database of welcoming sentences
 username = input("< What is your name? \n> ")  # This will search for a way to ask a users name
 
-  # Figure out how to filter names only, find only returns numbers
+# Figure out how to filter names only, find only returns numbers
 
 while len(username) == 0:
     username = input("< What is your name? \n> ")  # This will search for a way to ask a users name
 
 print("< Hello " + username + "! How can I help?\n")
 
-  # infinite loop starts Here
+# infinite loop starts Here
 
 while True:
 
