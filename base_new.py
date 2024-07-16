@@ -7,7 +7,7 @@ import sys
 
 def help():
     """Fuction outputing what questions are valid"""
-    help_answer = (
+    print(
         "> How are you?\n"
         "> What are your morals?\n"
         "> What can you do?\n"
@@ -16,13 +16,12 @@ def help():
         "> What is my name?\n"
         "> Help\n"
     )
-    return help_answer
-
+    
 
 def answer(user_question):
+    """Function with answers to question in help"""
     now = datetime.datetime.now()
-    answer_dict = {
-        
+    answer_dict = {    
         "How are you": "< I am fine. Thanks.",
         # find.("cant"):"< Fine!",
         # find.("your morals"):"< To follow the rules of Robots and AI!",
@@ -31,9 +30,9 @@ def answer(user_question):
         "What time is it":"< Current time is: " + (now.strftime(" %l:%M%p %z")),
         # find.("my name"):"< Your name is " + username,
         # find.("help"):"< Heres what you can ask:" + help() 
-        
+    
     }
-    return answer_dict.get(user.question)
+    return answer_dict.get(user.question, error())
 
 #def answer(user_question):  # Function answer can be called at any point
 #    """Function with answers to question in help"""
@@ -74,6 +73,10 @@ def answer(user_question):
     #else:
     #    z_answer = "< ErRoR... \n> Eeerror \n> Sorry How can I help?"
     #    return z_answer  # returns the answer
+
+def error():
+    """Outputs error if nothing matches in dict function"""
+    print("< ErRoR... \n How can I help?")
 
 
 Stext = "\nStarting Python......\n"  # Starting sequence, only said once
