@@ -79,20 +79,20 @@ def error():
     print("< ErRoR... \n How can I help?")
 
 
-s_text = "\nStarting Python......\n"  # Starting sequence, only said once
-s_atext = "Executing ProjectK.py......\nLoading"
-s_btext = "..........\n\n"
-for char in Stext:  # starts a loop based on whats in Btext
+S_TEXT = "\nStarting Python......\n"  # Starting sequence, only said once
+S_ATEXT = "Executing ProjectK.py......\nLoading"
+S_BTEXT = "..........\n\n"
+for char in S_TEXT:  # starts a loop based on whats in Btext
+    sys.stdout.write(char)  # prints out by each character
+    sys.stdout.flush()  # Changes the pase of output
+    time.sleep(0.)  # amount it takes for it to print
+    
+for char in S_ATEXT:  # starts a loop based on whats in Btext
     sys.stdout.write(char)  # prints out by each character
     sys.stdout.flush()  # Changes the pase of output
     time.sleep(0.1)  # amount it takes for it to print
 
-for char in Satext:  # starts a loop based on whats in Btext
-    sys.stdout.write(char)  # prints out by each character
-    sys.stdout.flush()  # Changes the pase of output
-    time.sleep(0.1)  # amount it takes for it to print
-
-for char in Sbtext:  # starts a loop based on whats in Btext
+for char in S_BTEXT:  # starts a loop based on whats in Btext
     sys.stdout.write(char)  # prints out by each character
     sys.stdout.flush()  # Changes the pase of output
     time.sleep(0.6)  # amount it takes for it to print
@@ -120,19 +120,18 @@ while True:
 
     if userq.lower().find("bye") >= 0:  # ends program if Good bye is typed
         print("< Please wait while program ends....")
-        yield
+        exit(1)
 
     elif userq.lower().find("cant") >= 0:
         print(answer(userq))
-        yield
 
     elif userq.lower() == "exit":
         print("< Good bye!")
-        yield
+        exit(1)
 
     else:
-        b_text = "\n< ...\n"
-        for char in b_text:  # starts a loop based on whats in Btext
+        B_TEXT = "\n< ...\n"
+        for char in B_TEXT:  # starts a loop based on whats in Btext
             sys.stdout.write(char)  # prints out by each character
             sys.stdout.flush()  # Changes the pase of output
             time.sleep(0.4)  # amount it takes for it to print
