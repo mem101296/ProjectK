@@ -79,6 +79,10 @@ def error():
     print("< ErRoR... \n How can I help?")
 
 
+def exit():
+    """This exits the program"""
+    sys.exit(0)
+
 S_TEXT = "\nStarting Python......\n"  # Starting sequence, only said once
 S_ATEXT = "Executing ProjectK.py......\nLoading"
 S_BTEXT = "..........\n\n"
@@ -120,14 +124,14 @@ while True:
 
     if userq.lower().find("bye") >= 0:  # ends program if Good bye is typed
         print("< Please wait while program ends....")
-        sys.exit
+        exit()
 
     elif userq.lower().find("cant") >= 0:
         print(answer(userq))
 
     elif userq.lower() == "exit":
         print("< Good bye!")
-        sys.exit
+        exit()
 
     else:
         B_TEXT = "\n< ...\n"
