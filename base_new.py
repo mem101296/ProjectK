@@ -71,9 +71,9 @@ def answer(user_question):
 #        y_answer = "< Heres what you can say!\n" + help()
 #        return y_answer
 
-    else:
-        z_answer = "< ErRoR... \n> Eeerror \n> Sorry How can I help?"
-        return z_answer  # returns the answer
+    #else:
+    #    z_answer = "< ErRoR... \n> Eeerror \n> Sorry How can I help?"
+    #    return z_answer  # returns the answer
 
 
 Stext = "\nStarting Python......\n"  # Starting sequence, only said once
