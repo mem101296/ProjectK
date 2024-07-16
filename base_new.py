@@ -34,45 +34,6 @@ def answer(user_question):
     }
     return answer_dict.get(user_question, error())
 
-#def answer(user_question):  # Function answer can be called at any point
-#    """Function with answers to question in help"""
-#    if user_question == "How are you":
-#        a_answer = "< I am fine. Thanks."  # Assigns variable
-#        return a_answer  # returns answer or variable
-#
-#    elif user_question.lower().find("cant") >= 0:
-#        b_answer = "< Fine!" # Assigns variable
-#        return b_answer  # returns answer or variable
-#
-#    elif user_question.lower().find("your morals") >= 0:
-#        c_answer = "< We are programmed to cause no harm to life forms."
-#        return c_answer
-#
-#    elif user_question == "What can you do":
-#        d_answer = "< Heres is what I can do!" + help()
-#        return d_answer
-#
-#    elif user_question == "What is todays date":
-#        now = datetime.datetime.now()  # Assigns now to date and time
-#        e_answer = "< Current date is" + (now.strftime(" %m-%d-%Y"))  # Assigns time to variable
-#        return e_answer  # returns answer or variable
-#
-#    elif user_question == "What time is it":
-#        now = datetime.datetime.now()  # Assigns now to date and time
-#        f_answer = "< Current time is" + (now.strftime(" %l:%M%p %z"))  # Assigns time to variable
-#        return f_answer  # returns answer or variable
-#
-#    elif user_question.lower().find("my name") >= 0:
-#        g_answer = "< Your name is " + username  # Assigns time to variable
-#        return g_answer  # returns answer or variable
-#
-#    elif user_question.lower().find("help") >= 0:  # help command
-#        y_answer = "< Heres what you can say!\n" + help()
-#        return y_answer
-
-    #else:
-    #    z_answer = "< ErRoR... \n> Eeerror \n> Sorry How can I help?"
-    #    return z_answer  # returns the answer
 
 def error():
     """Outputs error if nothing matches in dict function"""
