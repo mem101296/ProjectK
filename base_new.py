@@ -2,6 +2,7 @@ import datetime
 import time
 import sys
 
+
 def help():
     help_answer = (
         "> How are you?\n"
@@ -14,17 +15,18 @@ def help():
     )
     return help_answer
 
+
 def answer(userq):  # Function answer can be called at any point
 
     if userq == "How are you":
         A_answer = "< I am fine. Thanks."  # Assigns variable
         return A_answer  # returns answer or variable
 
-    elif userq.lower().find("cant")>=0:
+    elif userq.lower().find("cant") >= 0:
         B_answer = ("< Fine!")  # Assigns variable
         return B_answer  # returns answer or variable
 
-    elif userq.lower().find("your morals")>=0:
+    elif userq.lower().find("your morals") >= 0:
         C_answer = "< We are programmed to cause no harm to life forms."
         return C_answer
 
@@ -42,11 +44,11 @@ def answer(userq):  # Function answer can be called at any point
         F_answer = ("< Current time is" + (now.strftime(" %l:%M%p %z")))  # Assigns time to variable
         return F_answer  # returns answer or variable
 
-    elif userq.lower().find("my name")>=0:
+    elif userq.lower().find("my name") >= 0:
         G_answer = ("< Your name is " + username)  # Assigns time to variable
         return G_answer  # returns answer or variable
 
-    elif userq.lower().find("help")>=0:  # help command
+    elif userq.lower().find("help") >= 0:  # help command
         Y_answer = ("< Heres what you can say!\n" + help())  # \n< How are you? \n< You cant! \n< What are your morals \n< Help"
         return Y_answer
 
@@ -94,11 +96,11 @@ while True:
 
     userqAnswer = userq  # records users answer
 
-    if userq.lower().find("bye")>=0:  # ends program if Good bye is typed
+    if userq.lower().find("bye") >= 0:  # ends program if Good bye is typed
         print("< Please wait while program ends....")
         break
 
-    elif userq.lower().find("cant")>=0:
+    elif userq.lower().find("cant") >= 0:
         print(answer(userq))
         break
 
