@@ -5,7 +5,7 @@ import time
 import sys
 
 
-def help():
+def help_output():
     """Fuction outputing what questions are valid"""
     print(
         "> How are you?\n"
@@ -16,23 +16,23 @@ def help():
         "> What is my name?\n"
         "> Help\n"
     )
-    
+
 
 def answer(user_question):
     """Function with answers to question in help"""
     now = datetime.datetime.now()
-    answer_dict = {    
+    answer_dict = {
         "How are you": "< I am fine. Thanks.",
         # find.("cant"):"< Fine!",
         # find.("your morals"):"< To follow the rules of Robots and AI!",
-        "What can you do":"< Here is what I can do!" + help(),
+        "What can you do":"< Here is what I can do!" + help_output(),
         "What is todays date":"< Current date is: " + (now.strftime(" %m-%d-%Y")),
         "What time is it":"< Current time is: " + (now.strftime(" %l:%M%p %z")),
         # find.("my name"):"< Your name is " + username,
         # find.("help"):"< Heres what you can ask:" + help() 
-    
+
     }
-    return answer_dict.get(user.question, error())
+    return answer_dict.get(user_question, error())
 
 #def answer(user_question):  # Function answer can be called at any point
 #    """Function with answers to question in help"""
@@ -79,9 +79,9 @@ def error():
     print("< ErRoR... \n How can I help?")
 
 
-Stext = "\nStarting Python......\n"  # Starting sequence, only said once
-Satext = "Executing ProjectK.py......\nLoading"
-Sbtext = "..........\n\n"
+s_text = "\nStarting Python......\n"  # Starting sequence, only said once
+s_atext = "Executing ProjectK.py......\nLoading"
+s_btext = "..........\n\n"
 for char in Stext:  # starts a loop based on whats in Btext
     sys.stdout.write(char)  # prints out by each character
     sys.stdout.flush()  # Changes the pase of output
@@ -120,19 +120,19 @@ while True:
 
     if userq.lower().find("bye") >= 0:  # ends program if Good bye is typed
         print("< Please wait while program ends....")
-        break
+        yield
 
     elif userq.lower().find("cant") >= 0:
         print(answer(userq))
-        break
+        yield
 
     elif userq.lower() == "exit":
         print("< Good bye!")
-        break
+        yield
 
     else:
-        Btext = "\n< ...\n"
-        for char in Btext:  # starts a loop based on whats in Btext
+        b_text = "\n< ...\n"
+        for char in b_text:  # starts a loop based on whats in Btext
             sys.stdout.write(char)  # prints out by each character
             sys.stdout.flush()  # Changes the pase of output
             time.sleep(0.4)  # amount it takes for it to print
