@@ -29,7 +29,7 @@ def answer(user_question):
         "What is todays date":"< Current date is: " + (now.strftime(" %m-%d-%Y")),
         "What time is it":"< Current time is: " + (now.strftime(" %l:%M%p %z")),
         # find.("my name"):"< Your name is " + username,
-        # find.("help"):"< Heres what you can ask:" + help() 
+        # find.("help"):"< Heres what you can ask:" + help()
 
     }
     return answer_dict.get(user_question, error())
@@ -86,7 +86,7 @@ for char in S_TEXT:  # starts a loop based on whats in Btext
     sys.stdout.write(char)  # prints out by each character
     sys.stdout.flush()  # Changes the pase of output
     time.sleep(0.)  # amount it takes for it to print
-    
+
 for char in S_ATEXT:  # starts a loop based on whats in Btext
     sys.stdout.write(char)  # prints out by each character
     sys.stdout.flush()  # Changes the pase of output
@@ -120,14 +120,14 @@ while True:
 
     if userq.lower().find("bye") >= 0:  # ends program if Good bye is typed
         print("< Please wait while program ends....")
-        exit(1)
+        sys.exit
 
     elif userq.lower().find("cant") >= 0:
         print(answer(userq))
 
     elif userq.lower() == "exit":
         print("< Good bye!")
-        exit(1)
+        sys.exit
 
     else:
         B_TEXT = "\n< ...\n"
