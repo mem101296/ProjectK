@@ -1,3 +1,5 @@
+"""These modules provide access to datetime and sys, such as stdout"""
+
 import datetime
 import time
 import sys
@@ -19,42 +21,42 @@ def help():
 def answer(userq):  # Function answer can be called at any point
 
     if userq == "How are you":
-        A_answer = "< I am fine. Thanks."  # Assigns variable
-        return A_answer  # returns answer or variable
+        a_answer = "< I am fine. Thanks."  # Assigns variable
+        return a_answer  # returns answer or variable
 
     elif userq.lower().find("cant") >= 0:
-        B_answer = ("< Fine!")  # Assigns variable
-        return B_answer  # returns answer or variable
+        b_answer = "< Fine!" # Assigns variable
+        return b_answer  # returns answer or variable
 
     elif userq.lower().find("your morals") >= 0:
-        C_answer = "< We are programmed to cause no harm to life forms."
-        return C_answer
+        c_answer = "< We are programmed to cause no harm to life forms."
+        return c_answer
 
     elif userq == "What can you do":
-        D_answer = ("< Heres is what I can do!" + help())
-        return D_answer
+        d_answer = "< Heres is what I can do!" + help()
+        return d_answer
 
     elif userq == "What is todays date":
         now = datetime.datetime.now()  # Assigns now to date and time
-        E_answer = ("< Current date is" + (now.strftime(" %m-%d-%Y")))  # Assigns time to variable
-        return E_answer  # returns answer or variable
+        e_answer = "< Current date is" + (now.strftime(" %m-%d-%Y"))  # Assigns time to variable
+        return e_answer  # returns answer or variable
 
     elif userq == "What time is it":
         now = datetime.datetime.now()  # Assigns now to date and time
-        F_answer = ("< Current time is" + (now.strftime(" %l:%M%p %z")))  # Assigns time to variable
-        return F_answer  # returns answer or variable
+        f_answer = "< Current time is" + (now.strftime(" %l:%M%p %z"))  # Assigns time to variable
+        return f_answer  # returns answer or variable
 
     elif userq.lower().find("my name") >= 0:
-        G_answer = ("< Your name is " + username)  # Assigns time to variable
-        return G_answer  # returns answer or variable
+        g_answer = "< Your name is " + username  # Assigns time to variable
+        return g_answer  # returns answer or variable
 
     elif userq.lower().find("help") >= 0:  # help command
-        Y_answer = ("< Heres what you can say!\n" + help())
-        return Y_answer
+        y_answer = "< Heres what you can say!\n" + help()
+        return y_answer
 
     else:
-        Z_answer = "< ErRoR... \n> Eeerror \n> Sorry How can I help?"
-        return Z_answer  # returns the answer
+        z_answer = "< ErRoR... \n> Eeerror \n> Sorry How can I help?"
+        return z_answer  # returns the answer
 
 
 Stext = "\nStarting Python......\n"  # Starting sequence, only said once
@@ -77,7 +79,8 @@ for char in Sbtext:  # starts a loop based on whats in Btext
 
 
 print("######## ProjectK ########")  # Welcome sequence
-print("< Welcome User My Name Is ProjectK")  # I want this to search a database of welcoming sentences
+# I want this to search a database of welcoming sentences
+print("< Welcome User My Name Is ProjectK")
 username = input("< What is your name? \n> ")  # This will search for a way to ask a users name
 
 # Figure out how to filter names only, find only returns numbers
