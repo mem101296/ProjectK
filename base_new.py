@@ -79,7 +79,7 @@ def error():
     print("< ErRoR... \n How can I help?")
 
 
-def exit():
+def exit_program():
     """This exits the program"""
     sys.exit(0)
 
@@ -124,14 +124,14 @@ while True:
 
     if userq.lower().find("bye") >= 0:  # ends program if Good bye is typed
         print("< Please wait while program ends....")
-        exit()
+        exit_program()
 
     elif userq.lower().find("cant") >= 0:
         print(answer(userq))
 
     elif userq.lower() == "exit":
         print("< Good bye!")
-        exit()
+        exit_program()
 
     else:
         B_TEXT = "\n< ...\n"
